@@ -1,0 +1,38 @@
+.info-container {
+  background-color: black;
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.info {
+  color: white;
+  animation-name: info;
+  animation-duration: 15s;
+  transition: 10s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  text-align: right;
+  position: absolute;
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  line-height: 0.8;
+  left: 20px;
+  margin-top: 20px;
+}
+
+@keyframes info {
+  0% {
+    transform: translate(0, 100px);
+  }
+  10% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-150%, 0);
+  }
+}
