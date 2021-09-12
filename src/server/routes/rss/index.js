@@ -10,9 +10,12 @@ router.get('/api/rss', async (req, res) => {
 
   feed.items.forEach(item => {
     results.push(item.title);
+    results.push(item.content);
   });
 
-  res.json({ data: results });
+  const data = results.slice(0, 10);
+
+  res.json({ data });
 });
 
 module.exports = router;

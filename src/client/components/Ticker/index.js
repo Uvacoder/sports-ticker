@@ -11,9 +11,8 @@ const Ticker = () => {
     const fetchSHA = async () => {
       const response = await fetch('/api/rss');
       const json = await response.json();
-      const feedData = json.data.slice(0, 5);
 
-      updateFeed(feedData);
+      updateFeed(json.data);
     };
 
     fetchSHA();
