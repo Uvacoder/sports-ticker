@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 
 import logo from '../../public/espn-logo.png';
 import './style.scss';
 
 const Ticker = () => {
-  const [feed, updateFeed] = useState([]);
+  const [feed, updateFeed] = useState([{}]);
   const [feedIndex, setFeedIndex] = useState(0);
 
   useEffect(() => {
@@ -30,8 +31,8 @@ const Ticker = () => {
     <>
       <div className="ticker-container">
         <div className="ticker-category">TOP</div>
-        <div className="ticker" onAnimationIteration={nextNews}>
-          {feed[feedIndex]}
+        <div className={classNames('ticker', feed[feedIndex].type)} onAnimationIteration={nextNews}>
+          {feed[feedIndex].text}
         </div>
         <div className="ticker-logo-container">
           <img className="ticker-logo" src={logo} alt="ESPN_LOGO" />

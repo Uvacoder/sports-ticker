@@ -22,10 +22,7 @@
 
 .ticker {
   color: white;
-  animation-name: ticker;
-  animation-duration: 15s;
   transition: 10s;
-  animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   text-align: right;
   position: absolute;
@@ -35,6 +32,18 @@
   left: 130px;
   margin-top: 20px;
   white-space: nowrap;
+
+  &.title {
+    animation-timing-function: ease-in-out;
+    animation-name: title;
+    animation-duration: 10s;
+  }
+
+  &.content {
+    animation-timing-function: ease-in;
+    animation-name: content;
+    animation-duration: 15s;
+  }
 }
 
 .ticker-logo-container {
@@ -59,7 +68,22 @@
   width: 200px;
 }
 
-@keyframes ticker {
+@keyframes title {
+  0% {
+    transform: translate(0, 100px);
+  }
+  10% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100px);
+  }
+}
+
+@keyframes content {
   0% {
     transform: translate(0, 100px);
   }

@@ -9,8 +9,14 @@ router.get('/api/rss', async (req, res) => {
   const feed = await parser.parseURL('https://www.espn.com/espn/rss/news');
 
   feed.items.forEach(item => {
-    results.push(item.title);
-    results.push(item.content);
+    results.push({
+      type: 'title',
+      text: item.title,
+    });
+    results.push({
+      type: 'content',
+      text: item.content,
+    });
   });
 
   const data = results.slice(0, 10);
