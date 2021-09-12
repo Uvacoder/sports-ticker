@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "description": "Template project for react with express",
   "scripts": {
-    "build:client": "webpack --env.NODE_ENV=production --mode production",
-    "build:server": "babel -d ./dist_server ./src/server",
-    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "webpack-dev-server --env.NODE_ENV=local --mode development",
-    "dev:server": "nodemon --exec babel-node --inspect --watch src/server src/server",
-    "prestart": "npm run build:client && npm run build:server",
-    "start": "node dist_server/index.js"
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "webpack-dev-server --env.NODE_ENV=local --mode development",
+    "start:server": "nodemon --exec babel-node --inspect --watch src/server src/server"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
