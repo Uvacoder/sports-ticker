@@ -4,6 +4,20 @@
   position: fixed;
   width: 100%;
   bottom: 0;
+  display: flex;
+}
+
+.ticker-category {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  z-index: 10;
+  background-color: black;
+  border-right: 3px solid #ccc;
+  width: 100px;
+  text-align: center;
+  align-self: center;
+  padding: 5px 0;
 }
 
 .ticker {
@@ -18,7 +32,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 50px;
   line-height: 0.8;
-  left: 20px;
+  left: 130px;
   margin-top: 20px;
   white-space: nowrap;
 }

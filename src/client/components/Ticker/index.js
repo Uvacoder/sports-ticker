@@ -29,6 +29,7 @@ const Ticker = () => {
   return (
     <>
       <div className="ticker-container">
+        <div className="ticker-category">TOP</div>
         <div className="ticker" onAnimationIteration={nextNews}>
           {feed[feedIndex]}
         </div>
