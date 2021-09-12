@@ -1,4 +1,4 @@
-.info-container {
+.ticker-container {
   background-color: black;
   height: 90px;
   position: fixed;
@@ -6,9 +6,9 @@
   bottom: 0;
 }
 
-.info {
+.ticker {
   color: white;
-  animation-name: info;
+  animation-name: ticker;
   animation-duration: 15s;
   transition: 10s;
   animation-timing-function: ease-in;
@@ -22,7 +22,29 @@
   margin-top: 20px;
 }
 
-@keyframes info {
+.ticker-logo-container {
+  position: absolute;
+  height: 110px;
+  width: 500px;
+  border: 3px solid #ccc;
+  border-right: 0;
+  right: -10px;
+  z-index: 10;
+  transform: perspective(300px) rotateX(8deg);
+  bottom: 0;
+  border-top-left-radius: 10px;
+  border-bottom: none;
+  background: linear-gradient(to bottom, #e00d0d 0%, #350303 50%, #0a0e0a 54%, #0a0809 100%);
+  box-shadow: -40px 100px 109px 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.ticker-logo {
+  width: 200px;
+}
+
+@keyframes ticker {
   0% {
     transform: translate(0, 100px);
   }

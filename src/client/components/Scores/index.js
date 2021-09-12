@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Scores = () => {
-  return (
-    <>
-      <div>scores</div>
-    </>
-  );
+  return <></>;
 };
 
 export default Scores;

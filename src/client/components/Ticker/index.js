@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+
+import logo from '../../public/espn-logo.png';
 import './style.scss';
 
 const Ticker = () => {
@@ -27,9 +29,12 @@ const Ticker = () => {
 
   return (
     <>
-      <div className="info-container">
-        <div className="info" onAnimationIteration={nextNews}>
+      <div className="ticker-container">
+        <div className="ticker" onAnimationIteration={nextNews}>
           {feed[feedIndex]}
+        </div>
+        <div className="ticker-logo-container">
+          <img className="ticker-logo" src={logo} alt="ESPN_LOGO" />
         </div>
       </div>
     </>
