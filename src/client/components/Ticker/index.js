@@ -9,14 +9,14 @@ const Ticker = () => {
   const [feedIndex, setFeedIndex] = useState(0);
 
   useEffect(() => {
-    const fetchSHA = async () => {
+    const fetchRSS = async () => {
       const response = await fetch('/api/rss');
       const json = await response.json();
 
       updateFeed(json.data);
     };
 
-    fetchSHA();
+    fetchRSS();
   }, []);
 
   const nextNews = () => {

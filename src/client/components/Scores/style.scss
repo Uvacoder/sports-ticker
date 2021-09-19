@@ -1,0 +1,15 @@
+.scores {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.score-container {
+  padding: 10px;
+}
+
+.score-team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 200px;
+}

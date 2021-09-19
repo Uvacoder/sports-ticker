@@ -3,6 +3,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import rss from './routes/rss';
+import nfl from './routes/nfl';
 
 dotenv.config();
 const app = express();
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use(rss);
+app.use(nfl);
 
 const port = process.env.PORT || 5000;
 app.listen(port);
