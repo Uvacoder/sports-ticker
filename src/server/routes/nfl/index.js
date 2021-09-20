@@ -9,6 +9,7 @@ router.get('/api/nfl', async (req, res) => {
   );
   const data = await response.json();
   const mapped = data.events.map(event => {
+    const matchup = event.shortName;
     const status = {
       clock: event.status.displayClock,
       period: event.status.period,
@@ -20,6 +21,8 @@ router.get('/api/nfl', async (req, res) => {
         score: competitor.score,
         homeAway: competitor.homeAway,
         winner: competitor.winner,
+        color: competitor.team.color,
+        record: competitor.records[0].summary,
       };
     });
 
@@ -35,6 +38,7 @@ router.get('/api/nfl', async (req, res) => {
     });
 
     return {
+      matchup,
       teams,
       status,
     };

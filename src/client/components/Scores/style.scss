@@ -1,10 +1,42 @@
-.scores {
+.scores-container {
   display: flex;
+  background-color: rgb(241, 242, 243);
   flex-wrap: wrap;
+  z-index: 20;
 }
 
-.score-container {
-  padding: 10px;
+.logo {
+  width: 90px;
+  height: 70px;
+}
+
+.score {
+  display: flex;
+  flex: 1 0 21%;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  min-width: 20%;
+  margin: 5px;
+
+  .team {
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+    min-width: 45%;
+
+    .team-name,
+    .team-score {
+      font-size: 30px;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+
+    .team-record {
+      font-size: 15px;
+      padding-left: 10px;
+      padding-top: 12px;
+    }
+  }
 }
 
 .score-team-container {
